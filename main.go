@@ -1,6 +1,6 @@
 package main
 
-import "noteProject/server"
+import "noteproject/server"
 
 func init() {
 	server.InitServer()
