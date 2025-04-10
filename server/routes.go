@@ -8,14 +8,14 @@ import (
 func InitRotes() {
 	// Инициализация  роута (по умолчанию)
 	router := gin.Default()
+	// Создание заметки
+	router.POST("/note/", handlers.CreateNoteHandler)
 	// Редактирование заметки
 	router.PUT("/note/:id", handlers.UpdateNoteHandler)
 	// Удаление заметки
 	router.DELETE("/note/:id", handlers.DeleteNoteHandler)
 	// Получение заметки
 	router.GET("/note/:id", handlers.GetNoteHandler)
-	// Создание заметки
-	router.POST("/note/", handlers.CreateNoteHandler)
 	// Получение списка всех заметок
 	router.GET("/notes", handlers.GetNotesHandler)
 
